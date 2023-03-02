@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Shantell Sans", cursive;
+}
+body h1,
+h2,
+a {
+  font-family: "Berkshire Swash", cursive;
+}
+.item1 {
+  grid-area: header;
+  margin: 8px 0;
+  background-color: #dfffd8;
+  border-radius: 12px;
+}
+.item2 {
+  grid-area: nav;
+  margin: 8px 0;
+  background-color: #dfffd8;
+  border-radius: 12px;
+}
+.item3 {
+  grid-area: menü;
+  margin: 8px 4px;
+  background-color: #dfffd8;
+  border-radius: 12px;
+}
+.item4 {
+  grid-area: ürün;
+  margin: 8px 4px;
+  background-color: #dfffd8;
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 32% 32% 32%;
+}
+.item5 {
+  grid-area: footer;
+  margin: 8px 0;
+  background-color: #dfffd8;
+  border-radius: 12px;
+}
+#genel {
+  background-image: linear-gradient(
+    to bottom right,
+    #33ccff -50%,
+    #ff99cc 100%
+  );
+  height: 100%;
+  display: grid;
+  grid-template-rows: 120px 60px auto 120px;
+  grid-template-areas:
+    "header header header header header header"
+    "nav nav nav nav nav nav"
+    "menü ürün ürün ürün ürün ürün"
+    "footer footer footer footer footer footer";
+  text-align: center;
+}
+.items {
+  border: 1px solid black;
+}
+/* KUTULARIN İÇİNİN CSS BAŞLIYORUM*/
+
+.item1 h1 {
+  font-size: 48px;
+  margin-top: 24px;
+}
+.item2 ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin-top: 6px;
+}
+.item2 ul a {
+  text-decoration: none;
+  color: #5395ff;
+  font-size: 20px;
+  font-weight: bolder;
+  border: #5395ff solid 1px;
+  padding: 4px 8px;
+  border-radius: 24px;
+}
+.item2 ul a:hover {
+  color: #dfffd8;
+  background-color: #5395ff;
+  border: #5395ff solid 1px;
+  transition: 0.75s;
+}
+.item2 ul li {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.login {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  margin: 2% 12.5%;
+}
+.item3 h2 {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 15%;
+}
+.item3 input {
+  margin: 2% 2%;
+
+  border: 2px dotted red;
+
+  border-radius: 12px;
+  text-align: center;
+}
+.ürün {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2%;
+}
+.item4 img {
+  width: 144px;
+  height: 144px;
+}
+.item4 p {
+  font-size: 14px;
+  width: 576px;
+  height: 144px;
+  text-align: justify;
+}
+.img {
+  width: 25%;
+  margin-left: 35%;
+}
+.right p {
+  margin-left: 12.5%;
+}
+
+.item5 {
+  position: relative;
+}
+
+.item5 p {
+  position: absolute;
+  height: 33%;
+  width: 33%;
+  font-size: 24px;
+  font-weight: bold;
+  top: 33%;
+  left: 33%;
+}
