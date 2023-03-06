@@ -5,7 +5,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   font-family: "Shantell Sans", cursive;
 }
@@ -27,13 +27,13 @@ a {
   border-radius: 12px;
 }
 .item3 {
-  grid-area: menü;
+  grid-area: menu;
   margin: 8px 4px;
   background-color: #dfffd8;
   border-radius: 12px;
 }
 .item4 {
-  grid-area: ürün;
+  grid-area: urun;
   margin: 8px 4px;
   background-color: #dfffd8;
   border-radius: 12px;
@@ -58,7 +58,7 @@ a {
   grid-template-areas:
     "header header header header header header"
     "nav nav nav nav nav nav"
-    "menü ürün ürün ürün ürün ürün"
+    "menu urun urun urun urun urun"
     "footer footer footer footer footer footer";
   text-align: center;
 }
@@ -117,7 +117,7 @@ a {
   border-radius: 12px;
   text-align: center;
 }
-.ürün {
+.urun {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 2%;
@@ -152,4 +152,19 @@ a {
   font-weight: bold;
   top: 33%;
   left: 33%;
+}
+
+/* grid sistemini bu şekilde kurmak daha kullanışlı olabilir */
+/* temel yapı değiştiği için bazı taglar bozuldu fakat buna göre düzenleyebilirsiniz */
+@media (max-width:768px) {
+  #genel {
+    display: grid;
+    grid-template-rows: 120px 60px auto auto 120px;
+    grid-template-areas:
+      "header header header header header header"
+      "nav nav nav nav nav nav"
+      "menu menu menu menu menu menu"
+      "urun urun urun urun urun urun"
+      "footer footer footer footer footer footer";
+  }
 }
